@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router'
 import styles from '../styles/Header.module.scss';
 import { motion } from 'framer-motion';
-import useWindowSize from '../utils/useWindowSize';
 
 const easing = [.6, -.05, .01, .99]
 
@@ -31,18 +29,11 @@ const stagger = {
 
 const Header = () => {
 
-    const router = useRouter();
-    const { width } = useWindowSize();
-
-    const isMobile = width < 768
-
-    let onAboutPage = router.route === '/about';
-
     const NavItems = [
-        { name: 'Home', slug: '/'},
-        { name: 'About', slug: '/about'},
-        { name: 'Team', slug: '/team'},
-        { name: 'Contact', slug: '/contact'},
+        { name: 'Home'},
+        { name: 'About'},
+        { name: 'Team'},
+        { name: 'Contact'},
     ]
 
     return (
@@ -61,17 +52,11 @@ const Header = () => {
                             whileTap={{ scale: 0.95}}
                             variants={fadeInUp}
                             key={navItem.name}>
-                            <Link href={navItem.slug}>
-                                <motion.a 
-                                    initial={{ color: 'white' }}
-                                    animate={{ color: !onAboutPage ? 'white' : onAboutPage && i < 2 ? 'white' : 'black' }} // color first two links white on about page due to split bg
-                                >{navItem.name}</motion.a>
-                            </Link>
+                                <a>{navItem.name}</a>
                         </motion.li>  
                     )  
                 }
                 )}   
-
             </motion.ul>
         </motion.header>
     );

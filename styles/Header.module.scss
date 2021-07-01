@@ -1,0 +1,47 @@
+.header {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    .logo {
+        flex-basis: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        img {
+            max-width: 30px;
+            display: none;
+        }  
+    }
+
+    .nav {
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-basis: 60%;
+
+        li {
+            padding: 0 1rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+
+            a {
+                text-decoration: none;
+                font-weight: 500;
+                color: white;
+            }
+        }
+    }
+
+    .socials {
+        flex-basis: 20%;
+        justify-content: center;
+        align-items: center;
+
+    }
+}

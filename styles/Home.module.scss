@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap');
+
+.container {
+    height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .canvasContainer {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    .title {
+        font-family: 'Titillium Web', sans-serif;
+        font-size: clamp(6rem, 24vw, 14rem);
+        line-height: clamp(6rem, 20vw, 12rem);
+        color: #FAFAFA;
+        text-transform: uppercase;
+        text-align: center;
+        position: absolute;
+        z-index: 20;
+        pointer-events: none;
+    }
+
+    .award {
+        position: absolute;
+        left: 2rem;
+        bottom: 2rem;
+        max-width: 60px;
+        opacity: .4;
+    }
+
+}
+
+.pageTransitionSvg {
+    position: fixed;
+    top: 48%;
+    left: 48%;
+    z-index: 100;
+}
+
+@media (min-width: 768px) {
+
+    .container > .award {
+        left: 6rem;
+    }
+
+    .title {
+        position: relative;
+        z-index: 2 !important;
+    }
+
+}

@@ -8,8 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.2.0",
+    "@react-spring/core": "^9.1.2",
+    "@react-spring/three": "^9.1.2",
+    "@react-three/drei": "^4.3.3",
+    "@react-three/fiber": "^6.0.21",
+    "framer-motion": "^4.1.15",
     "next": "10.2.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "sass": "^1.32.12",
+    "three": "^0.128.0"
   }
 }

@@ -1,0 +1,19 @@
+.socials {
+    bottom: 2rem;
+    right: 0;
+    list-style: none;
+    display: flex;
+    z-index: 100;
+
+    
+    .socialItem {
+        margin: 0 2rem 0 0;
+        opacity: .8;
+    }
+}
+
+@media (min-width: 768px) {
+    .socials {
+        right: 4rem;
+    }
+}
